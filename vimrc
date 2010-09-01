@@ -3,6 +3,7 @@ set nocompatible
 "set autoindent
 filetype indent on
 filetype plugin on
+syntax on
 "let g:vimsh_prompt_pty  = "%m%"
 "let g:vimsh_sh = "/bin/zsh"
 set background=dark
