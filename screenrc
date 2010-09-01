@@ -3,7 +3,7 @@ hardstatus  alwayslastline     "%{+b rk}%H%{gk} |%c %{yk}%d.%m.%Y | %t%{-} |%72=
 #hardstatus alwayslastline "%?%{yk}%-Lw%?%{wb}%n*%f %t%{-}%?(%u)%?%?%{yk}%+Lw%?"
 vbell off
 # --
-# $Id: _screenrc,v 1.4 2005/11/20 21:00:35 steve Exp $
+# 
 #
 
 # skip the startup message
