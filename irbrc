@@ -1,16 +1,47 @@
-require 'rubygems'
-require 'wirble'
+
+#require 'rubygems' rescue nil
+require 'wirb'
+#require 'hirb'
 require 'interactive_editor'
-Wirble.init
-Wirble.colorize
-load File.dirname(__FILE__) + '/.railsrc' if $0 == 'irb' && ENV['RAILS_ENV'] 
+#
+Wirb.start
+#Wirble.colorize
+#
+#Hirb::View.enable
+
+if ENV.include?('RAILS_ENV')
+
+    if !Object.const_defined?('RAILS_DEFAULT_LOGGER')
+        require 'logger'
+        Object.const_set('RAILS_DEFAULT_LOGGER', Logger.new(STDOUT))
+    end
+
+    def sql(query)
+        ActiveRecord::Base.connection.select_all(query)
+    end
+
+elsif defined?(Rails) && !Rails.env.nil?
+    if Rails.logger
+        Rails.logger =Logger.new(STDOUT)
+        ActiveRecord::Base.logger = Rails.logger
+    end
+    if Rails.env == 'test'
+        require 'test/test_helper'
+    end
+else
+
+end
+
+
+
 #class Object
 #    # Return only the methods not present on basic objects
 #    def interesting_methods
 #        (self.methods - Object.new.methods).sort
 #    end
 #end
-%w{rubygems wirble pp irb/ext/save-history}.each do |lib| 
+=begin
+%w{wirble pp irb/ext/save-history}.each do |lib| 
   begin 
     require lib 
   rescue LoadError => err
@@ -184,3 +215,9 @@ end
 
 ### USEFUL ALIASES
 alias q exit
+=end
+class Object
+    def local_methods
+        self.methods - Object.methods
+    end
+end

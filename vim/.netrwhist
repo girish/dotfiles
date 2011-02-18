@@ -1,10 +1,4 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =8
-let g:netrw_dirhist_1='/home/girish/.rvm/gems/ruby-1.9.2-p0/gems/interactive_editor-0.0.4'
-let g:netrw_dirhist_2='/home/girish/gitrepos/wikiimporter/wiki'
-let g:netrw_dirhist_3='/home/girish/gitrepos/dumbo/hdfs'
-let g:netrw_dirhist_4='/home/girish/shopping_cart/public'
-let g:netrw_dirhist_5='/home/girish/gitrepos/gitflow/.git/branches'
-let g:netrw_dirhist_6='/home/girish/gitrepos/ThunderSurvey/config'
-let g:netrw_dirhist_7='/home/girish/gitrepos/Titanium Developer-1.2.1/Test/Resources/android'
-let g:netrw_dirhist_8='/home/girish/gitrepos/itty/src'
+let g:netrw_dirhist_cnt =2
+let g:netrw_dirhist_1='/home/girish/gitrepos/warden/spec/warden'
+let g:netrw_dirhist_2='/home/girish/.rvm/gems/ruby-1.9.2-p0/gems/angels-0.0.9'

@@ -8,3 +8,5 @@ def loud_logger
   set_logger_to Logger.new(STDOUT)
 end
 
+Rails.logger =Logger.new(STDOUT)
+ActiveRecord::Base.logger = Rails.logger

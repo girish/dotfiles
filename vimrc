@@ -12,15 +12,11 @@ map <C-a> :execute 'NERDTreeToggle '<CR>
 let g:VimShell_EnableInteractive = 1
 let g:VimShell_EnableSmartCase = 1
 let g:VimShell_EnableAutoLs = 1
-set tabstop=4
-set shiftwidth=4
-set expandtab
-set nosmarttab
 set showcmd
 "set wildmenu "Turn on WiLd menu
 set laststatus=2
 " When vimrc is edited, reload it
-autocmd! bufwritepost vimrc source ~/.vim_runtime/vimrc
+"autocmd! bufwritepost vimrc source ~/.vim_runtime/vimrc
 "set statusline=%F%m%r%h%w[%L][%{&ff}]%y[%p%%][%04l,%04v]
 "map <F12> ggVGg?
 " Set backspace config
@@ -49,4 +45,9 @@ set listchars=tab:▸\ ,eol:¬
 highlight NonText guifg=#4a4a59
 highlight SpecialKey guifg=#4a4a5
 
-nmap :term :ConqueTerm bash 
+nmap :term :ConqueTerm bash
+set guifont=monaco\ 12
+""Make comments italic
+"highlight Comment cterm=italic term=italic 
+""ctermbg=None ctermfg=None 
+"highlight Comment font=Bitstream_Vera_Sans_Mono_Oblique:h14
