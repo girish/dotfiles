@@ -42,12 +42,27 @@ nmap <leader>l :set list!<CR>
 
 " Use the same symbols as TextMate for tabstops and EOLs
 set listchars=tab:▸\ ,eol:¬
-highlight NonText guifg=#4a4a59
-highlight SpecialKey guifg=#4a4a5
 
 nmap :term :ConqueTerm bash
-set guifont=monaco\ 12
+set guifont=monaco\ 10
+"set gfn=Monospace\ 10
 ""Make comments italic
 "highlight Comment cterm=italic term=italic 
 ""ctermbg=None ctermfg=None 
 "highlight Comment font=Bitstream_Vera_Sans_Mono_Oblique:h14
+" IMPORTANT: Uncomment one of the following lines to force
+" " using 256 colors (or 88 colors) if your terminal supports it,
+" " but does not automatically use 256 colors by default.
+"set t_Co=256
+"set t_Co=88
+"if (&t_Co == 256 || &t_Co == 88) && !has('gui_running') &&
+"			\ filereadable(expand("$HOME/.vim/plugin/guicolorscheme.vim"))
+"	" Use the guicolorscheme plugin to makes 256-color or 88-color
+"	" terminal use GUI colors rather than cterm colors.
+"	runtime! plugin/guicolorscheme.vim
+"	GuiColorScheme github
+"else
+"	" For 8-color 16-color terminals or for gvim, just use the
+"	" regular :colorscheme command.
+"	colorscheme github
+"endif
