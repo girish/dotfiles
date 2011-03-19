@@ -22,8 +22,6 @@ define(){
 	dig +short txt $1.wp.dg.cx
 }
 
-# No RDOC please
-alias gemi='gem install --no-rdoc --no-ri' 
 # Print size of the files in sorted order
 alias lss="ls -srSh"
 # colorize grep
