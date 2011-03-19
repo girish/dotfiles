@@ -6,7 +6,7 @@ filetype plugin on
 syntax on
 "let g:vimsh_prompt_pty  = "%m%"
 "let g:vimsh_sh = "/bin/zsh"
-set background=dark
+"set background=dark
 map <C-a> :execute 'NERDTreeToggle '<CR>
 " Initialize execute file list.
 let g:VimShell_EnableInteractive = 1
@@ -53,7 +53,7 @@ set guifont=monaco\ 10
 " IMPORTANT: Uncomment one of the following lines to force
 " " using 256 colors (or 88 colors) if your terminal supports it,
 " " but does not automatically use 256 colors by default.
-"set t_Co=256
+set t_Co=256
 "set t_Co=88
 "if (&t_Co == 256 || &t_Co == 88) && !has('gui_running') &&
 "			\ filereadable(expand("$HOME/.vim/plugin/guicolorscheme.vim"))
@@ -66,3 +66,4 @@ set guifont=monaco\ 10
 "	" regular :colorscheme command.
 "	colorscheme github
 "endif
+colorscheme vividchalk
