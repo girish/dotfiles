@@ -8,6 +8,7 @@ syntax on
 "let g:vimsh_sh = "/bin/zsh"
 "set background=dark
 map <C-a> :execute 'NERDTreeToggle '<CR>
+map <C-x> :execute 'ConqueTerm bash'<CR>
 " Initialize execute file list.
 let g:VimShell_EnableInteractive = 1
 let g:VimShell_EnableSmartCase = 1
