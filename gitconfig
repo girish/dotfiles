@@ -5,3 +5,13 @@
 [user]
 	name = D Girish Kumar Reddy
 	email = girish.iiith@gmail.com
+[alias]
+	st = status
+	s = status
+	c = commit
+	co = checkout
+	d = diff
+	b = branch
+	lg = log
+	last = cat-file commit HEAD
+	unstage = reset HEAD
