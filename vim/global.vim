@@ -75,9 +75,9 @@ set ignorecase          " Do case insensitive matching
 set smartcase           " do not ignore if search pattern has CAPS
 
 " omni completion settings
-set ofu=syntaxcomplete#Complete
-let g:rubycomplete_buffer_loading = 0
-let g:rubycomplete_classes_in_global = 1
+"set ofu=syntaxcomplete#Complete
+"let g:rubycomplete_buffer_loading = 0
+"let g:rubycomplete_classes_in_global = 1
 
 " directory settings
 set backupdir=~/.backup,.       " list of directories for the backup file

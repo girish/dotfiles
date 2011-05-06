@@ -5,6 +5,7 @@ hi! link ShowMarksHLu LineNr
 hi! link ShowMarksHLo LineNr
 hi! link ShowMarksHLm LineNr
 
+
 " syntastic
 let g:syntastic_enable_signs=1
 let g:syntastic_auto_loc_list=1
@@ -38,14 +39,14 @@ let g:miniBufExplVSplit = 25
 let g:miniBufExplorerMoreThanOne = 100
 let g:miniBufExplUseSingleClick = 1
 " ,b to display current buffers list
-nmap <Leader>b :MiniBufExplorer<cr>
+nmap <leader>b :MiniBufExplorer<CR>
 
 let g:Conque_Read_Timeout = 50 " timeout for waiting for command output.
 let g:Conque_TERM = 'xterm'
 " ,sh shell window
 nmap <Leader>sh :ConqueTermSplit bash<cr>
-" ,r run command
-nmap <Leader>R :ConqueSplit
+"open bash
+map <C-c> :execute 'ConqueTerm bash'<CR>
 
 " yankring
 let g:yankring_replace_n_pkey = '<leader>['
@@ -64,6 +65,8 @@ let g:CommandTMatchWindowAtTop=1
 " Fugitive
 " ,e for Ggrep
 nmap <leader>g :Ggrep 
+"
+map <C-c> :execute 'ConqueTerm bash'<CR>
 
 " Ack
 " ,a for Ack
