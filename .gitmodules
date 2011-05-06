@@ -130,3 +130,23 @@
 	path = vim/bundle/showmarks
 	url = git://github.com/vim-scripts/ShowMarks.git
 	ignore = dirty
+[submodule "vim/bundle/sessionman"]
+	path = vim/bundle/sessionman
+	url = git://github.com/vim-scripts/sessionman.vim.git
+	ignore = dirty
+[submodule "vim/bundle/delimitmate"]
+	path = vim/bundle/delimitmate
+	url = git://github.com/vim-scripts/delimitMate.vim.git
+	ignore = dirty
+[submodule "vim/bundle/syntastic"]
+	path = vim/bundle/syntastic
+	url = git://github.com/scrooloose/syntastic.git
+	ignore = dirty
+[submodule "vim/bundle/minibufexplorer"]
+	path = vim/bundle/minibufexplorer
+	url = git://github.com/vim-scripts/minibufexplorerpp.git
+	ignore = dirty
+[submodule "vim/bundle/vim-textobj-user"]
+	path = vim/bundle/vim-textobj-user
+	url = git://github.com/kana/vim-textobj-user.git
+	ignore = dirty
