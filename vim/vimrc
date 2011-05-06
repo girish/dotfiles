@@ -1,10 +1,4 @@
-set nocompatible
-
 call pathogen#runtime_append_all_bundles()
-
-"Add jquery syntax to Javascript files
-au BufRead,BufNewFile jquery.*.js set ft=javascript syntax=jquery
-
 
 source ~/.vim/global.vim
 source ~/.vim/bindings.vim

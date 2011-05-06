@@ -82,3 +82,18 @@
 [submodule "vim/bundle/clojure"]
 	path = vim/bundle/clojure
 	url = git://github.com/vim-scripts/VimClojure.git
+[submodule "vim/bundle/vim-textobj-user"]
+	path = vim/bundle/vim-textobj-user
+	url = git://github.com/kana/vim-textobj-user.git
+[submodule "vim/bundle/minibufexplorer"]
+	path = vim/bundle/minibufexplorer
+	url = git://github.com/vim-scripts/minibufexplorerpp.git
+[submodule "vim/bundle/syntastic"]
+	path = vim/bundle/syntastic
+	url = git://github.com/scrooloose/syntastic.git
+[submodule "vim/bundle/delimitmate"]
+	path = vim/bundle/delimitmate
+	url = git://github.com/vim-scripts/delimitMate.vim.git
+[submodule "vim/bundle/sessionman"]
+	path = vim/bundle/sessionman
+	url = git://github.com/vim-scripts/sessionman.vim.git
