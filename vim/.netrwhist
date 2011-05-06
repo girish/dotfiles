@@ -1,11 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =9
-let g:netrw_dirhist_1='/home/girish/gitrepos/exception_app'
-let g:netrw_dirhist_2='/home/girish/.rvm/gems/ruby-1.9.2-p0/gems/carrierwave-0.5.2'
-let g:netrw_dirhist_3='/home/girish/gitrepos/gigumes'
-let g:netrw_dirhist_4='/home/girish/.rvm/gems/ruby-1.9.2-p0/gems/devise-1.1.6'
-let g:netrw_dirhist_5='/home/girish/gitrepos/gigumes/lib/carrierwave'
-let g:netrw_dirhist_6='/home/girish/.rvm/gems/ruby-1.9.2-p0/gems/gdocs4ruby-0.1.2'
-let g:netrw_dirhist_7='/home/girish/gitrepos'
-let g:netrw_dirhist_8='/home/girish/.rvm/gems/ruby-1.9.2-p0/gems/gdocs4ruby-0.1.2'
-let g:netrw_dirhist_9='/home/girish/gitrepos/gigumes/config/deploy'
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/home/girish/gitrepos/social_stream/lib/social_stream'
+let g:netrw_dirhist_2='/home/girish/.vim'
+let g:netrw_dirhist_3='/home/girish/gitrepos/exception_app/app/views/exception_stores'
+let g:netrw_dirhist_4='/home/girish/gitrepos/exception_app/.git/branches'
