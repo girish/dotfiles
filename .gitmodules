@@ -97,3 +97,18 @@
 [submodule "vim/bundle/sessionman"]
 	path = vim/bundle/sessionman
 	url = git://github.com/vim-scripts/sessionman.vim.git
+[submodule "vim/bundle/vim-align"]
+	path = vim/bundle/vim-align
+	url = git://github.com/tsaleh/vim-align.git
+[submodule "vim/bundle/vim-textobj-rubyblock"]
+	path = vim/bundle/vim-textobj-rubyblock
+	url = git://github.com/nelstrom/vim-textobj-rubyblock.git
+[submodule "vim/bundle/vim-indentobject"]
+	path = vim/bundle/vim-indentobject
+	url = git://github.com/austintaylor/vim-indentobject.git
+[submodule "vim/bundle/vim-ruby-refactoring"]
+	path = vim/bundle/vim-ruby-refactoring
+	url = git://github.com/ecomba/vim-ruby-refactoring.git
+[submodule "vim/bundle/showmarks"]
+	path = vim/bundle/showmarks
+	url = git://github.com/vim-scripts/ShowMarks.git
