@@ -1,6 +1,8 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_cnt =6
 let g:netrw_dirhist_1='/home/girish/gitrepos/social_stream/lib/social_stream'
 let g:netrw_dirhist_2='/home/girish/.vim'
 let g:netrw_dirhist_3='/home/girish/gitrepos/exception_app/app/views/exception_stores'
 let g:netrw_dirhist_4='/home/girish/gitrepos/exception_app/.git/branches'
+let g:netrw_dirhist_5='/home/girish/gitrepos/dotvim/bundle/local-snippets'
+let g:netrw_dirhist_6='/home/girish/gitrepos/dotfiles/vim'
