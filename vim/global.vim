@@ -149,7 +149,7 @@ if has("autocmd")
   autocmd filetype markdown setlocal wrap linebreak nolist
   autocmd bufnewfile,bufread *.rss setfiletype xml
   autocmd bufnewfile,bufread rakefile,capfile,gemfile,termfile,config.ru setfiletype ruby
-  autocmd filetype ruby :abolish -buffer initialise initialize
+  autocmd filetype ruby :Abolish -buffer initialise initialize
   autocmd filetype vo_base :colorscheme solarized
 endif
 
