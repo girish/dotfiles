@@ -150,3 +150,6 @@
 	path = vim/bundle/vim-textobj-user
 	url = git://github.com/kana/vim-textobj-user.git
 	ignore = dirty
+[submodule "vim/bundle/scratch"]
+	path = vim/bundle/scratch
+	url = git://github.com/vim-scripts/scratch.vim.git

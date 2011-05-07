@@ -115,10 +115,6 @@ runtime macros/matchit.vim
 "  for ms-dos and win32:  $vim\_vimrc
 "	    for openvms:  sys$login:.vimrc
 
-" when started as "evim", evim.vim will already have done these settings.
-if v:progname =~? "evim"
-  finish
-endif
 
 
 
@@ -135,7 +131,6 @@ endif
 
 " preferences {{{1
 set visualbell t_vb=
-set number
 "set cursorline
 "set tabstop=4
 "set softtabstop=4
@@ -144,7 +139,6 @@ set number
 set hidden
 set nojoinspaces
 set listchars=tab:▸\ ,eol:¬
-set wildmode=longest,list
 "set spelllang=en_gb
 " put swap files in /tmp file
 "set backupdir=~/tmp
@@ -376,7 +370,7 @@ command! -range=% -nargs=1 Refactor :<line1>,<line2>call Refactor(<args>)
 " Good article on setting a statusline:
 "   http://got-ravings.blogspot.com/2008/08/vim-pr0n-making-statuslines-that-own.html
 " Always show the status line (even if no split windows)
-set laststatus=2
+"set laststatus=2
 " Mappings for a recovering TextMate user {{{1
 " Indentation {{{2
 "nmap <A-[> <<
