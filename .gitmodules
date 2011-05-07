@@ -153,3 +153,6 @@
 [submodule "vim/bundle/scratch"]
 	path = vim/bundle/scratch
 	url = git://github.com/vim-scripts/scratch.vim.git
+[submodule "vim/bundle/HexHighlight"]
+	path = vim/bundle/HexHighlight
+	url = git://github.com/vim-scripts/hexHighlight.vim.git
