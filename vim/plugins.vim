@@ -1,5 +1,5 @@
-" showmarks
 let g:showmarks_enable = 0 " disabled by default by populardemand ;)
+" showmarks
 hi! link ShowMarksHLl LineNr
 hi! link ShowMarksHLu LineNr
 hi! link ShowMarksHLo LineNr
@@ -16,9 +16,9 @@ let g:delimitMate_expand_cr = 1
 
 " nerdtree
 " Ctrl-P to Display the file browser tree
-nmap <C-Q> :NERDTreeToggle<CR>
+map <C-p> :execute 'NERDTreeToggle'<CR>
 " ,p to show current file in the tree
-nmap <leader>p :NERDTreeFind<CR>
+map <leader>p :NERDTreeFind<CR>
 
 " nerdcommenter
 " ,/ to invert comment on the current line/selection
