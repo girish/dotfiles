@@ -15,3 +15,7 @@
 	lg = log
 	last = cat-file commit HEAD
 	unstage = reset HEAD
+[push]
+	default = tracking
+[branch]
+	autosetuprebase = always
