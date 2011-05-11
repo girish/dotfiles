@@ -158,3 +158,12 @@
 [submodule "vim/bundle/autocomplpop"]
 	path = vim/bundle/autocomplpop
 	url = git://github.com/vim-scripts/AutoComplPop.git
+[submodule "vim/bundle/yankring"]
+	path = vim/bundle/yankring
+	url = git://github.com/vim-scripts/YankRing.vim.git
+[submodule "vim/bundle/vim-colorschemes"]
+	path = vim/bundle/vim-colorschemes
+	url = git://github.com/flazz/vim-colorschemes.git
+[submodule "vim/bundle/command-t"]
+	path = vim/bundle/command-t
+	url = git://github.com/vim-scripts/Command-T.git
