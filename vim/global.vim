@@ -41,7 +41,8 @@ hi SpellErrors guibg=red guifg=black ctermbg=red ctermfg=black
 " status line
 set statusline=%<%1*%f%*\ %h%m%r%#warningmsg#%{SyntasticStatuslineFlag()}%*%=%-14.(%l,%c%V%)\ %P
 " highlihgt status line file name
-"hi User1 term=bold,reverse cterm=bold ctermfg=4 ctermbg=2 gui=bold guifg=Blue
+"hi User1 term=bold,reverse cterm=bold ctermfg=4 ctermbg=2 gui=bold guifg=Black guibg=White
+highlight User1  guifg=Black   guibg=#aabbee gui=bold ctermfg=Black ctermbg=White cterm=bold
 
 " behavior
                         " ignore these files when completing names and in
@@ -146,51 +147,14 @@ set listchars=tab:▸\ ,eol:¬
 if has("autocmd")
   autocmd filetype html,css,scss,ruby,pml,yaml,coffee,vim setlocal ts=2 sts=2 sw=2 expandtab
   autocmd filetype javascript setlocal ts=4 sts=4 sw=4 noexpandtab
+  "Add jquery syntax to Javascript files
+  au BufRead,BufNewFile jquery.*.js set ft=javascript syntax=jquery
   autocmd filetype markdown setlocal wrap linebreak nolist
   autocmd bufnewfile,bufread *.rss setfiletype xml
   autocmd bufnewfile,bufread rakefile,capfile,gemfile,termfile,config.ru setfiletype ruby
   autocmd filetype ruby :Abolish -buffer initialise initialize
   autocmd filetype vo_base :colorscheme solarized
 endif
-
-" toggles & switches (leader commands) {{{1
-let mapleader = ","
-nmap <silent> <leader>l :set list!<cr>
-nmap <silent> <leader>w :set wrap!<cr>
-nmap <silent> <buffer> <leader>s :set spell!<cr>
-nmap <silent> <leader>n :silent :nohlsearch<cr>
-nmap <silent> <leader>c :indentguidestoggle<cr>
-command! -nargs=* Wrap set wrap linebreak nolist
-command! -nargs=* Maxsize set columns=1000 lines=1000
-" ctags {{{1
-map <leader>rt :!ctags --extra=+f -r *<cr><cr>
-let tlist_markdown_settings='markdown;h:headings'
-let tlist_show_one_file=1
-nmap <leader>/ :tlisttoggle<cr>
-
-" mappings {{{1
-" speed up buffer switching {{{2
-map <c-k> <c-w>k
-map <c-j> <c-w>j
-map <c-h> <c-w>h
-map <c-l> <c-w>l
-" speed up tab switching {{{2
-map <a-s-]> gt
-map <a-s-[> gt
-map <a-1> 1gt
-map <a-2> 2gt
-map <a-3> 3gt
-map <a-4> 4gt
-map <a-5> 5gt
-map <a-6> 6gt
-map <a-7> 7gt
-map <a-8> 8gt
-map <a-9> 9gt
-map <a-0> :tablast<cr>
-" shortcuts to make it easier to explore wrapped lines {{{2
-" these come in handy when the following settings are enabled:
-"     :set linebreak wrap nolist
-vmap <a-j> gj
 vmap <a-k> gk
 vmap <a-4> g$
 vmap <a-6> g^
@@ -412,7 +376,7 @@ let g:space_no_search = 1
 
 
 " EasyMotion {{{2
-let g:EasyMotion_leader_key = ',,'
+"let g:EasyMotion_leader_key = ',,'
 
 " Vim wiki {{{2
 let g:vimwiki_menu=''
