@@ -130,7 +130,7 @@ if !exists(":difforig")
 endif
 
 " preferences {{{1
-set visualbell t_vb=
+"set visualbell t_vb=
 "set cursorline
 "set tabstop=4
 "set softtabstop=4
