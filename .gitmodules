@@ -152,3 +152,6 @@
 [submodule "vim/bundle/HexHighlight"]
 	path = vim/bundle/HexHighlight
 	url = git://github.com/vim-scripts/hexHighlight.vim.git
+[submodule "vim/bundle/vim-clojure"]
+	path = vim/bundle/vim-clojure
+	url = git://github.com/vim-scripts/VimClojure.git
