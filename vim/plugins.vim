@@ -13,12 +13,11 @@ let g:syntastic_auto_loc_list=1
 " delimitMate
 let g:delimitMate_expand_space = 1
 let g:delimitMate_expand_cr = 1
-
 " nerdtree
 " Ctrl-P to Display the file browser tree
 map <C-p> :execute 'NERDTreeToggle'<CR>
 " ,p to show current file in the tree
-map <leader>p :NERDTreeFind<CR>
+map <leader>n :NERDTreeFind<CR>
 
 " nerdcommenter
 " ,/ to invert comment on the current line/selection
@@ -75,3 +74,8 @@ nmap <leader>k :Ack
 " vim-indentobject
 " add Markdown to the list of indentation based languages
 let g:indentobject_meaningful_indentation = ["haml", "sass", "python", "yaml", "markdown"]
+
+let vimclojure#HighlightBuiltins=1
+let vimclojure#ParenRainbow=1
+let vimclojure#WantNailgun = 1
+let vimclojure#NailgunClient = "/home/girish/nailgun-client/ng"

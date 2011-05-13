@@ -1,8 +1,7 @@
 " be 'modern'
 set nocompatible
-
-filetype plugin on 
-filetype indent on
+filetype off
+filetype plugin indent on
 syntax on
 
 " prevent vim from adding that stupid empty line at the end of every file
@@ -26,7 +25,7 @@ set list
 
 let mapleader=","
 "Shortcut to rapidly toggle `set list`
-nmap <leader>l :set list!<CR> 
+nmap <leader>l :set list!<CR>
 
 "using 256 colors (or 88 colors) if your terminal supports it,
 "but does not automatically use 256 colors by default.
@@ -385,3 +384,10 @@ let g:NERDMenuMode=0
 "  Modelines: {{{1
 " vim: nowrap fdm=marker
 " }}}
+
+"Update terminal buffer when unfocuesed
+let g:ConqueTerm_ReadUnfocused = 1
+"When C-w is pressed in insert switch buffers
+let g:ConqueTerm_CWInsert = 1
+"Insert mode when switched to conque
+let g:ConqueTerm_InsertOnEnter = 1
