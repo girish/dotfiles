@@ -102,10 +102,6 @@
 	path = vim/bundle/tabular
 	url = git://github.com/godlygeek/tabular.git
 	ignore = dirty
-[submodule "vim/bundle/clojure"]
-	path = vim/bundle/clojure
-	url = git://github.com/vim-scripts/VimClojure.git
-	ignore = dirty
 [submodule "vim/bundle/vim-align"]
 	path = vim/bundle/vim-align
 	url = git://github.com/tsaleh/vim-align.git
