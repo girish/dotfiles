@@ -167,3 +167,9 @@
 [submodule "vim/bundle/command-t"]
 	path = vim/bundle/command-t
 	url = git://github.com/vim-scripts/Command-T.git
+[submodule "vim/bundle/zoomwim"]
+	path = vim/bundle/zoomwim
+	url = git://github.com/vim-scripts/ZoomWin.git
+[submodule "vim/bundle/color-sampler-pack"]
+	path = vim/bundle/color-sampler-pack
+	url = git://github.com/vim-scripts/Color-Sampler-Pack.git
