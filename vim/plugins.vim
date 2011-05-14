@@ -13,25 +13,7 @@ let g:syntastic_auto_loc_list=1
 " delimitMate
 let g:delimitMate_expand_space = 1
 let g:delimitMate_expand_cr = 1
-" nerdtree
-" Ctrl-P to Display the file browser tree
-map <C-p> :execute 'NERDTreeToggle'<CR>
-" ,p to show current file in the tree
-map <leader>n :NERDTreeFind<CR>
 
-" nerdcommenter
-" ,/ to invert comment on the current line/selection
-nmap <leader>/ :call NERDComment(0, "invert")<cr>
-vmap <leader>/ :call NERDComment(0, "invert")<cr>
-
-" ,t to show tags window
-let Tlist_Show_Menu=1
-nmap <leader>t :TlistToggle<CR>
-
-" sessionman
-nmap <leader>S :SessionList<CR>
-nmap <leader>SS :SessionSave<CR>
-nmap <leader>SA :SessionSaveAs<CR>
 
 " minibufexpl
 let g:miniBufExplVSplit = 25
@@ -45,7 +27,10 @@ let g:Conque_TERM = 'xterm'
 " ,sh shell window
 nmap <Leader>sh :ConqueTermSplit bash<cr>
 "open bash
-map <C-c> :execute 'ConqueTerm bash'<CR>
+map <C-c> match ExtraWhitespace /\s\+$/
+autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
+
+map <c-c> :execute 'ConqueTermVSplit bash'<CR>
 
 " yankring
 let g:yankring_replace_n_pkey = '<leader>['
@@ -58,14 +43,14 @@ nmap <leader>y :YRShow<cr>
 "let g:rubycomplete_rails = 1
 
 " command-t
-nmap <unique> <silent> <Leader><Leader> :CommandT<CR>
+nmap <Leader>f :CommandT<CR>
 let g:CommandTMatchWindowAtTop=1
 
 " Fugitive
 " ,e for Ggrep
 nmap <leader>g :Ggrep 
 "
-map <C-c> :execute 'ConqueTerm bash'<CR>
+map <C-c> :execute 'ConqueTermVSplit bash'<CR>
 
 " Ack
 " ,a for Ack
@@ -75,7 +60,18 @@ nmap <leader>k :Ack
 " add Markdown to the list of indentation based languages
 let g:indentobject_meaningful_indentation = ["haml", "sass", "python", "yaml", "markdown"]
 
-let vimclojure#HighlightBuiltins=1
+let vimclojure#HighlightBuiltins =1
 let vimclojure#ParenRainbow=1
 let vimclojure#WantNailgun = 1
 let vimclojure#NailgunClient = "/home/girish/nailgun-client/ng"
+
+
+
+" convenient command to see the difference between the current buffer and the
+" file it was loaded from, thus the changes you made.
+" only define it when not defined already.
+if !exists(":Difforig")
+  command Difforig vert new | set bt=nofile | r # | 0d_ | diffthis
+        \ | wincmd p | diffthis
+endif
+

@@ -25,8 +25,6 @@ endfunction
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-vmap <C-x><C-x> "ry:call Send_to_Screen(@r)<CR>
-nmap <C-x><C-x> var<C-x><C-x>
 
 nmap <C-s>v :call Screen_Vars()<CR>
 
