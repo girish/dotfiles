@@ -25,7 +25,8 @@ nmap <leader>n :cn<CR>
 "set completeopt=menuone,preview,longest
 set completeopt=menuone,preview
 
-
+"Shortcut to rapidly toggle `set list`
+nmap <leader>l :set list!<CR>
 
 vmap <a-k> gk
 vmap <a-4> g$

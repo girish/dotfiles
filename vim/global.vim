@@ -23,9 +23,6 @@ set title
 set listchars=tab:▸\ ,eol:¬
 set list
 
-let mapleader = ","
-"Shortcut to rapidly toggle `set list`
-nmap <leader>l :set list!<CR>
 
 "using 256 colors (or 88 colors) if your terminal supports it,
 "but does not automatically use 256 colors by default.
