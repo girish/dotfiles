@@ -1,45 +1,41 @@
-
-#require 'rubygems' rescue nil
+require 'rubygems' rescue nil
 require 'wirb'
-#require 'hirb'
 require 'interactive_editor'
-#
+
 Wirb.start
-#Wirble.colorize
-#
+
+#require 'hirb'
 #Hirb::View.enable
 
 if ENV.include?('RAILS_ENV')
-
-    if !Object.const_defined?('RAILS_DEFAULT_LOGGER')
-        require 'logger'
-        Object.const_set('RAILS_DEFAULT_LOGGER', Logger.new(STDOUT))
-    end
-
-    def sql(query)
-        ActiveRecord::Base.connection.select_all(query)
-    end
-
+  if !Object.const_defined?('RAILS_DEFAULT_LOGGER')
+    require 'logger'
+    Object.const_set('RAILS_DEFAULT_LOGGER', Logger.new(STDOUT))
+  end
+  def sql(query)
+    ActiveRecord::Base.connection.select_all(query)
+  end
 elsif defined?(Rails) && !Rails.env.nil?
-    if Rails.logger
-        Rails.logger =Logger.new(STDOUT)
-        ActiveRecord::Base.logger = Rails.logger
-    end
-    if Rails.env == 'test'
-        require 'test/test_helper'
-    end
+  if Rails.logger
+    Rails.logger =Logger.new(STDOUT)
+    ActiveRecord::Base.logger = Rails.logger
+  end
+  if Rails.env == 'test'
+    require 'test/test_helper'
+  end
+  def sql(query)
+    ActiveRecord::Base.connection.select_all(query)
+  end
 else
 
 end
 
+class Object
+  def local_methods
+    (self.methods - Object.new.methods).sort
+  end
+end
 
-
-#class Object
-#    # Return only the methods not present on basic objects
-#    def interesting_methods
-#        (self.methods - Object.new.methods).sort
-#    end
-#end
 =begin
 %w{wirble pp irb/ext/save-history}.each do |lib| 
   begin 
@@ -72,16 +68,16 @@ if ENV['RAILS_ENV']
   rails_root = File.basename(Dir.pwd)
   prompt = "#{rails_root}[#{rails_env.sub('production', 'prod').sub('development', 'dev')}]"
   IRB.conf[:PROMPT] ||= {}
-  
+
   IRB.conf[:PROMPT][:RAILS] = {
     :PROMPT_I => "#{prompt}>> ",
     :PROMPT_S => "#{prompt}* ",
     :PROMPT_C => "#{prompt}? ",
     :RETURN   => "=> %s\n" 
   }
-  
+
   IRB.conf[:PROMPT_MODE] = :RAILS
-  
+
   #Redirect log to STDOUT, which means the console itself
   IRB.conf[:IRB_RC] = Proc.new do
     logger = Logger.new(STDOUT)
@@ -89,7 +85,7 @@ if ENV['RAILS_ENV']
     ActiveResource::Base.logger = logger
     ActiveRecord::Base.instance_eval { alias :[] :find }
   end
-  
+
   ### RAILS SPECIFIC HELPER METHODS
   # TODO: DRY this out
   def log_ar_to (stream)
@@ -102,11 +98,11 @@ if ENV['RAILS_ENV']
     ActionController::Base.logger = expand_logger stream
     reload!
   end
-    
+
   def expand_log_file(name)
     "log/#{name.to_s}.log"
   end
-  
+
   def expand_logger(name)
     if name.is_a? Symbol
       logger = expand_log_file name
@@ -137,7 +133,7 @@ class Object
   def local_methods
     (methods - Object.instance_methods).sort
   end
-  
+
   #copy to pasteboard
   #pboard = general | ruler | find | font
   #def to_pboard(pboard=:general)
@@ -169,17 +165,17 @@ class Class
   def class_methods
     (methods - Class.instance_methods - Object.methods).sort
   end
-  
+
   #Returns an array of methods defined in the class, class methods and instance methods
   def defined_methods
     methods = {}
-    
+
     methods[:instance] = new.local_methods
     methods[:class] = class_methods
-    
+
     methods
   end
-  
+
   def metaclass
     eigenclass
   end
@@ -214,10 +210,6 @@ end
 #Readline::History.start_session_log
 
 ### USEFUL ALIASES
-alias q exit
 =end
-class Object
-    def local_methods
-        self.methods - Object.methods
-    end
-end
+
+alias q exit
