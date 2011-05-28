@@ -25,12 +25,9 @@ nmap <leader>b :MiniBufExplorer<CR>
 let g:Conque_Read_Timeout = 50 " timeout for waiting for command output.
 let g:Conque_TERM = 'xterm'
 " ,sh shell window
-nmap <Leader>sh :ConqueTermSplit bash<cr>
-"open bash
-map <C-c> match ExtraWhitespace /\s\+$/
-autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
-
-map <c-c> :execute 'ConqueTermVSplit bash'<CR>
+nmap <Leader>sh :ConqueTermSplit zsh<cr>
+map <c-c> :execute 'ConqueTermVSplit zsh -7'<CR>
+let g:ConqueTerm_MyTermPosition = 'J'
 
 " yankring
 let g:yankring_replace_n_pkey = '<leader>['
@@ -38,23 +35,24 @@ let g:yankring_replace_n_nkey = '<leader>]'
 " ,y to show the yankring
 nmap <leader>y :YRShow<cr>
 
+
+nmap <c-p> :NERDTreeToggle<cr>
+
 " rails
 " completing Rails hangs a lot
 "let g:rubycomplete_rails = 1
 
 " command-t
 nmap <Leader>f :CommandT<CR>
-let g:CommandTMatchWindowAtTop=1
+let g:CommandTMatchWindowAtBottom=1
 
 " Fugitive
 " ,e for Ggrep
-nmap <leader>g :Ggrep 
+nmap <leader>g :Ggrep
 "
-map <C-c> :execute 'ConqueTermVSplit bash'<CR>
-
 " Ack
 " ,a for Ack
-nmap <leader>k :Ack 
+nmap <leader>k :Ack
 
 " vim-indentobject
 " add Markdown to the list of indentation based languages
@@ -74,4 +72,5 @@ if !exists(":Difforig")
   command Difforig vert new | set bt=nofile | r # | 0d_ | diffthis
         \ | wincmd p | diffthis
 endif
+
 

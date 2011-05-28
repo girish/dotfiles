@@ -9,7 +9,6 @@ set noeol
 set binary
 
 " presentation settings
-"set number              " precede each line with its line number
 set numberwidth=3       " number of culumns for line numbers
 set textwidth=0         " Do not wrap words (insert)
 set nowrap              " Do not wrap words (view)
@@ -30,6 +29,8 @@ set t_Co=256
 
 colorscheme vividchalk
 set background=dark
+"colorscheme solarized
+"set background=light
 
 " highlight spell errors
 hi SpellErrors guibg=red guifg=black ctermbg=red ctermfg=black
@@ -45,7 +46,7 @@ highlight User1  guifg=Black   guibg=#aabbee gui=bold ctermfg=Black ctermbg=Whit
 " explorer
 set wildignore=.svn,CVS,.git,.hg,*.o,*.a,*.class,*.mo,*.la,*.so,*.obj,*.swp,*.jpg,*.png,*.xpm,*.gif
 set shell=/bin/bash     " use bash for shell commands
-set autowriteall        " Automatically save before commands like :next and :make
+"set autowriteall        " Automatically save before commands like :next and :make
 set hidden              " enable multiple modified buffers
 set history=1000
 set autoread            " automatically read feil that has been changed on disk and doesn't have changes in vim
@@ -90,9 +91,7 @@ set foldmethod=indent
 set foldlevel=9
 set nofoldenable        "dont fold by default "
 
-set hidden
 set nojoinspaces
-set listchars=tab:▸\ ,eol:¬
 " extended '%' mapping for if/then/else/end etc
 runtime macros/matchit.vim
 
