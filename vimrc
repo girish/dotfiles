@@ -11,9 +11,6 @@ source ~/.vim/global.vim
 set number
 
 
-"match ExtraWhitespace /\s\+$/
-"autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
-
 
 
 

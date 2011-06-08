@@ -64,6 +64,9 @@ let vimclojure#WantNailgun = 1
 let vimclojure#NailgunClient = "/home/girish/nailgun-client/ng"
 
 
+highlight ExtraWhitespace ctermbg=red guibg=red
+autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/
 
 " convenient command to see the difference between the current buffer and the
 " file it was loaded from, thus the changes you made.

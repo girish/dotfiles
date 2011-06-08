@@ -101,7 +101,8 @@ if has("autocmd")
   autocmd filetype html,css,scss,ruby,pml,yaml,coffee,vim setlocal ts=2 sts=2 sw=2 expandtab
   autocmd filetype javascript setlocal ts=4 sts=4 sw=4 noexpandtab
   "Add jquery syntax to Javascript files
-  au BufRead,BufNewFile jquery.*.js set ft=javascript syntax=jquery
+  au BufRead,BufNewFile jquery.*.js, *.json set ft=javascript syntax=jquery
+  au BufRead,BufNewFile *.json set ft=javascript syntax=jquery
   autocmd filetype markdown setlocal wrap linebreak nolist
   autocmd bufnewfile,bufread *.rss setfiletype xml
   autocmd bufnewfile,bufread rakefile,capfile,gemfile,termfile,config.ru setfiletype ruby
@@ -116,3 +117,8 @@ if has("autocmd")
     au bufwritepost .vimrc,_vimrc,vimrc,.gvimrc,_gvimrc,gvimrc so $MYVIMRC | if has('gui_running') | so $MYGVIMRC | endif
     augroup end
 endif
+
+
+
+
+
