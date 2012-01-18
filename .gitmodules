@@ -178,3 +178,6 @@
 	path = vim/bundle/color-sampler-pack
 	url = git://github.com/vim-scripts/Color-Sampler-Pack.git
 	ignore = dirty
+[submodule "vim/bundle/vim-powerline"]
+	path = vim/bundle/vim-powerline
+	url = git://github.com/Lokaltog/vim-powerline.git
