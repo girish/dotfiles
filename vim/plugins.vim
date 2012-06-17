@@ -9,8 +9,8 @@ hi! link ShowMarksHLm LineNr
 " syntastic
 let g:syntastic_enable_signs=1
 let g:syntastic_auto_loc_list=1
+let g:syntastic_quiet_warnings=1
 
-" delimitMate
 let g:delimitMate_expand_space = 1
 let g:delimitMate_expand_cr = 1
 
