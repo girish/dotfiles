@@ -1,1 +1,1 @@
-set ai et ts=4 sw=4 tw=0
+set ai et ts=2 sw=2 tw=2
