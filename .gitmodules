@@ -90,10 +90,6 @@
 	path = vim/bundle/taglist
 	url = git://github.com/vim-scripts/taglist.vim.git
 	ignore = dirty
-[submodule "vim/bundle/conque_term"]
-	path = vim/bundle/conque_term
-	url = git://github.com/rson/vim-conque.git
-	ignore = dirty
 [submodule "vim/bundle/nerdtree"]
 	path = vim/bundle/nerdtree
 	url = git://github.com/scrooloose/nerdtree.git
@@ -193,3 +189,6 @@
 [submodule "vim/bundle/vim-coffee-script"]
 	path = vim/bundle/vim-coffee-script
 	url = git://github.com/kchmck/vim-coffee-script.git
+[submodule "vim/bundle/vim-conque"]
+	path = vim/bundle/vim-conque
+	url = https://github.com/rosenfeld/conque-term.git

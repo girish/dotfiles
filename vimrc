@@ -20,15 +20,15 @@ endif
 
 
 " Emulate repl
-"function! Send_to_conque(text)
-"  if !exists("b:conque_repl")
-"    let a:command = input('Interactive Command(irb, python): ')
-"    let b:conque_repl =  conque_term#open(a:command, ['belowright vsplit'], 1)
-"  endif
-"  call b:conque_repl.write(a:text)
-"endfunction
-"vmap <C-x><C-x> "ry:call Send_to_conque(@r)<CR>
-"nmap <C-x><C-x> var<C-x><C-x>
+function! Send_to_conque(text)
+  if !exists("b:conque_repl")
+    let a:command = input('Interactive Command(irb, python): ')
+    let b:conque_repl =  conque_term#open(a:command, ['belowright vsplit'], 1)
+  endif
+  call b:conque_repl.write(a:text)
+endfunction
+vmap <C-x><C-x> "ry:call Send_to_conque(@r)<CR>
+nmap <C-x><C-x> var<C-x><C-x>
 
 function! Conque_term_post_selected(type) "{{{
 

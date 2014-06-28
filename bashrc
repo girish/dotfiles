@@ -60,3 +60,5 @@ GREY="\[\033[0;97m\]"
 BLUE="\[\033[0;34m\]"
 PS_CLEAR="\[\033[0m\]"
 SCREEN_ESC="\[\033k\033\134\]"
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
